@@ -15,27 +15,24 @@ red = color(character, Colors.red)
 blue = color(character, Colors.blue)
 white = color(character, Colors.white)
 
-class Player:
+class Player2:
     def __init__(self, player_x, player_y):
         self.x = player_x
         self.y = player_y
 
         self.matrizPlayer = [
-            [yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, None, None, None, None, None, None, None, None, None, None],
-            [None, None, None, None, yellow, yellow, yellow, yellow, None, None, None, None, None, None, None, None, None, None, None, None, None, None],
-            [None, None, None, None, red, red, red, red, None, None, None, None, None, None, None, red, red, red, red, red, red, red],
+            [None, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, yellow, None, None, None, None, None, None, None, None, None, None, None],
+            [None, None, None, None, yellow, yellow, yellow, yellow, None, None, None, None, None, None, None, red, red, red, red, red, red, red],
             [None, None, None, None, red, red, red, red, None, None, None, None, red, red, red, None, None, None, None, None, None, None],
             [None, None, None, None, red, red, red, red, None, None, None, None, red, red, red, None, None, None, None, None, None, None],
             [None, None, None, None, red, red, red, red, None, None, None, None, red, red, red, red, red, red, red, red, red, red],
             [None, None, None, None, red, red, red, red, None, None, None, None, None, None, None, red, red, red, red, red, red, red],
-            [None, blue, blue, blue, blue, blue, blue, blue, None, None, None, None, blue, blue, blue, blue, blue, blue, blue, None, None, None],
-            [None, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue],
-            [None, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, None, None, None, blue, blue, blue, blue, blue, blue, blue, blue],
-            [None, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, None, None, None, blue, blue, blue, blue, blue, blue, blue, blue],
+            [None, None, blue, blue, blue, blue, blue, blue, None, None, None, None, blue, blue, blue, blue, blue, blue, blue, None, None, None],
+            [None, None, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue],
+            [None, None, blue, blue, blue, blue, blue, blue, blue, blue, blue, None, None, None, blue, blue, blue, blue, blue, blue, blue, blue],
             [None, None, None, None, blue, blue, blue, blue, None, None, None, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue, blue],
             [None, None, None, None, blue, blue, blue, blue, None, None, None, None, None, None, None, None, None, blue, blue, blue, blue, blue],
             [None, None, None, None, None, None, None, white, white, white, white, white, white, white, white, white, white, white, None, None, None, None],
-            [None, None, None, None, None, None, None, None, None, None, white, white, white, white, white, white, white, white, None, None, None, None],
             [None, None, None, None, None, None, None, None, None, None, white, white, white, white, white, white, white, white, None, None, None, None],
             [None, None, None, None, None, None, None, None, None, None, white, white, white, white, white, white, white, white, None, None, None, None],
             [None, None, None, None, None, None, None, None, None, None, white, white, white, white, white, white, white, white, None, None, None, None],
@@ -48,7 +45,7 @@ class Player:
 
 
 
-player = Player(0, 0)
+player = Player2(0, 0)
 
 
 counter = 0
