@@ -14,7 +14,7 @@ red = color(character, Colors.red)
 blue = color(character, Colors.blue)
 white = color(character, Colors.white)
 
-class Player:
+class Player2:
     def __init__(self, player_x, player_y):
         self.x = player_x
         self.y = player_y
@@ -39,31 +39,19 @@ class Player:
             [None, None, None, None, None, None, None, None, None, None, white, white, white, white, white, white, white, white, None, None, None, None],
             [None, None, None, None, None, None, None, None, None, None, white, white, white, white, white, white, white, white, None, None, None, None],
             [None, None, None, None, None, None, None, None, None, None, white, white, white, white, white, white, white, white, white, white, white, white],
-
         ]
-
-    def printPlayer(self):
-        counter = 0
-        WConio2.gotoxy(self.x, self.y)
-        for x in self.matrizPlayer:
-            WConio2.gotoxy(self.x, self.y + counter)
-            for y in x:
-                if (y == None):
-                    print(' ', end="")
-                else:
-                    print(y, end="")
-            print('')
-            counter +=1
     
-    def controll(self):
+    def controll(self, count):
         if WConio2.kbhit():
             (key, symbol) = WConio2.getch()
     
             if symbol == 'a':
-                self.x-=1
+                if count%3 == 0:
+                    self.x-=1
     
             if symbol == 'd':
-                self.x+=1
+                if count%3 == 0:
+                    self.x+=1
     
 
-        
+    
