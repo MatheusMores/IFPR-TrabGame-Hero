@@ -1,4 +1,3 @@
-from pickle import NONE
 from colorit import *
 import cursor
 import os
