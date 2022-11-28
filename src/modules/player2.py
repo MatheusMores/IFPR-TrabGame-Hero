@@ -3,6 +3,8 @@ import cursor
 import os
 import WConio2
 
+from .limiteTela import LimiteTela
+
 init_colorit()
 os.system('cls')
 cursor.hide()
@@ -46,12 +48,34 @@ class Player2:
             (key, symbol) = WConio2.getch()
     
             if symbol == 'a':
-                if count%3 == 0:
+                if LimiteTela.limitePlayerX(self.x - 1) == False:
+                    pass
+                elif count%2 == 0:
                     self.x-=1
     
             if symbol == 'd':
-                if count%3 == 0:
+                if LimiteTela.limitePlayerX(self.x + 1) == False:
+                    pass
+                elif count%2 == 0:
                     self.x+=1
+            
+            if symbol == ' ':
+                if LimiteTela.limitePlayerY(self.y - 1) == False:
+                    pass
+                elif count%5 == 0:
+                    self.y-=2
+                    
+
+
+    def gravity(self, countY):   
+        if LimiteTela.limitePlayerY(self.y + 1) != False:
+            if countY%2 == 0 and countY != 0:
+                self.y+=1
+                return 3
+        
+        return countY
+
+
     
 
     
