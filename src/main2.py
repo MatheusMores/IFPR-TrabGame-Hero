@@ -12,10 +12,10 @@ def iniciarJogo():
     cursor.hide()
     blue = color('#', (0, 106, 255))
 
-    player_x = 20
-    player_y = 10
+    player_x = 150
+    player_y = 40
     counterX, counterY = 0, 0
-    count = 0
+    count, countY = 0, 0
 
 
     player = Player2(player_x, player_y)
@@ -24,16 +24,18 @@ def iniciarJogo():
         WConio2.gotoxy(0, 0)
     
         # Bordas de cima
-        print(blue * 200)
+        print(blue * 237)
 
         counterY = 0
-        for j in range(50):
+        for j in range(64):
             print(blue,end="")
             
             counterX = 0
 
-            for k in range(198):
+            for k in range(235):
                 char = " "
+
+                countY = player.gravity(countY)
 
                 player.controll(count)
 
@@ -53,9 +55,10 @@ def iniciarJogo():
             print(blue)
 
         # Bordas de baixo 
-        print(blue * 200)
+        print(blue * 237)
 
         count += 1
+        countY += 1
 
     
         
